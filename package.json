@@ -1,16 +1,16 @@
 {
-  "name": "badwords-list",
-  "version": "1.0.0",
-  "author": "Michael Price <webmech@gmail.com>",
+  "name": "liste-gros-mots",
+  "version": "0.5.0",
+  "author": "Christophe ROGER <darwiinc@live.fr>",
   "license": "MIT",
-  "description": "A highly consumable list of bad (profanity) english words (forked from badwords)",
+  "description": "A highly consumable list of bad (profanity) french words (forked from badwords-list)",
   "main": "./lib/index",
   "scripts": {
     "test": "./node_modules/.bin/mocha -R nyan"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:web-mech/badwords-list.git"
+    "url": "git@github.com:darwiin/liste-gros-mots.git"
   },
   "keywords": [
     "bad",
@@ -21,13 +21,15 @@
     "blacklist",
     "black",
     "list",
-    "swear"
+    "swear",
+    "french",
+    "insulte"
   ],
   "devDependencies":{
     "mocha":"1.14.0",
     "better-assert":"1.0.0"
   },
   "bugs": {
-    "url": "https://github.com/web-mech/badwords-list/issues"
+    "url": "https://github.com/darwiin/liste-gros-mots/issues"
   }
 }
