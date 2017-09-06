@@ -1,4 +1,4 @@
-lite-gros-mots v1.0.0
+lite-gros-mots v1.0.0 [![Build Status](https://travis-ci.org/darwiin/french-badwords-list.svg?branch=master)](https://travis-ci.org/darwiin/french-badwords-list) [![Coverage Status](https://coveralls.io/repos/github/darwiin/french-badwords-list/badge.svg?branch=master)](https://coveralls.io/github/darwiin/french-badwords-list?branch=master)
 ========
 
 A highly consumable list of bad (profanity) french words based on the list found in [Wiktionary.org](https://fr.wiktionary.org/w/index.php?title=Cat%C3%A9gorie:Insultes_en_fran%C3%A7ais&pageuntil=mongol+a+batteries%0Amongol+%C3%A0+batteries#mw-pages)
