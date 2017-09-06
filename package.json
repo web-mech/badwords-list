@@ -6,7 +6,8 @@
   "description": "A highly consumable list of french bad (profanity) words (forked from badwords-list)",
   "main": "./lib/index",
   "scripts": {
-    "test": "./node_modules/.bin/mocha -R nyan"
+    "test": "./node_modules/.bin/mocha -R nyan",
+    "cover": "./node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
   "repository": {
     "type": "git",
@@ -26,8 +27,10 @@
     "insulte"
   ],
   "devDependencies": {
-    "mocha": "1.14.0",
-    "better-assert": "1.0.0"
+    "better-assert": "1.0.0",
+    "coveralls": "^2.13.1",
+    "istanbul": "^0.4.5",
+    "mocha": "1.14.0"
   },
   "bugs": {
     "url": "https://github.com/darwiin/french-badwords-list/issues"
