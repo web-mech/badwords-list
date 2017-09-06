@@ -1,4 +1,4 @@
-lite-gros-mots v0.5.0
+lite-gros-mots v1.0.0
 ========
 
 A highly consumable list of bad (profanity) french words based on the list found in [Wiktionary.org](https://fr.wiktionary.org/w/index.php?title=Cat%C3%A9gorie:Insultes_en_fran%C3%A7ais&pageuntil=mongol+a+batteries%0Amongol+%C3%A0+batteries#mw-pages)
