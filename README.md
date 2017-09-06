@@ -1,9 +1,9 @@
-badwords-list v1.0.0
+lite-gros-mots v0.5.0
 ========
 
-A highly consumable list of bad (profanity) english words based on the nice short and simple list found in [Google's "what do you love" project](http://www.wdyl.com/) made accessable by [Jamie Wilkinson](https://gist.github.com/jamiew) [here](https://gist.github.com/jamiew/1112488)
+A highly consumable list of bad (profanity) french words based on the list found in [Wiktionary.org](https://fr.wiktionary.org/w/index.php?title=Cat%C3%A9gorie:Insultes_en_fran%C3%A7ais&pageuntil=mongol+a+batteries%0Amongol+%C3%A0+batteries#mw-pages)
 
-Inspired by [badwords](https://github.com/MauriceButler/badwords)
+Inspired by [badwords-list](https://github.com/MauriceButler/badwords)
 
 This data has been exposed as an object that contains
 
@@ -17,13 +17,13 @@ depending on what is required for your purposes.
 Install
 =======
 
-    npm install badwords-list
+    npm install french-badwords-list
 
 Usage
 =====
 
 ```
-var list = require('badwords-list'),
+var list = require('french-badwords-list'),
 	array = list.array,
 	object = list.object,
 	regex = list.regex;

@@ -1,16 +1,16 @@
 {
-  "name": "liste-gros-mots",
+  "name": "french-badwords-list",
   "version": "0.5.0",
   "author": "Christophe ROGER <darwiinc@live.fr>",
   "license": "MIT",
-  "description": "A highly consumable list of bad (profanity) french words (forked from badwords-list)",
+  "description": "A highly consumable list of french bad (profanity) words (forked from badwords-list)",
   "main": "./lib/index",
   "scripts": {
     "test": "./node_modules/.bin/mocha -R nyan"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:darwiin/liste-gros-mots.git"
+    "url": "git@github.com:darwiin/french-badwords-list.git"
   },
   "keywords": [
     "bad",
@@ -25,11 +25,11 @@
     "french",
     "insulte"
   ],
-  "devDependencies":{
-    "mocha":"1.14.0",
-    "better-assert":"1.0.0"
+  "devDependencies": {
+    "mocha": "1.14.0",
+    "better-assert": "1.0.0"
   },
   "bugs": {
-    "url": "https://github.com/darwiin/liste-gros-mots/issues"
+    "url": "https://github.com/darwiin/french-badwords-list/issues"
   }
 }
