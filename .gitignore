@@ -12,6 +12,8 @@ logs
 results
 package-lock.json
 
+.DS_Store
+.coveralls.yml
 npm-debug.log
 node_modules/
 coverage
