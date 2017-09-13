@@ -1,11 +1,13 @@
-# French Bad Words List (french-badwords-list) v1.0.0 
+# French Bad Words List (french-badwords-list)
 
- [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)[![Build Status](https://travis-ci.org/darwiin/french-badwords-list.svg?branch=master)](https://travis-ci.org/darwiin/french-badwords-list) [![Coverage Status](https://coveralls.io/repos/github/darwiin/french-badwords-list/badge.svg?branch=master)](https://coveralls.io/github/darwiin/french-badwords-list?branch=master)
+ [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.org/darwiin/french-badwords-list.svg?branch=master)](https://travis-ci.org/darwiin/french-badwords-list) [![Coverage Status](https://coveralls.io/repos/github/darwiin/french-badwords-list/badge.svg?branch=master)](https://coveralls.io/github/darwiin/french-badwords-list?branch=master)
 
 
 ## Synopsis
 
 A highly consumable list of bad (profanity) french words based on the list found in [Wiktionary.org](https://fr.wiktionary.org/w/index.php?title=Cat%C3%A9gorie:Insultes_en_fran%C3%A7ais&pageuntil=mongol+a+batteries%0Amongol+%C3%A0+batteries#mw-pages)
+
+[![NPM](https://nodei.co/npm/french-badwords-list.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/french-badwords-list/) [![NPM](https://nodei.co/npm-dl/french-badwords-list.png?height=2)](https://nodei.co/npm/french-badwords-list/)
 
 Inspired by [badwords-list](https://github.com/MauriceButler/badwords)
 
@@ -29,16 +31,16 @@ var list = require('french-badwords-list'),
 
 	// Only keep french badwords
 	leoProfanity.clearList();
-  leoProfanity.add(frenchBadwordsList.array);
+	leoProfanity.add(frenchBadwordsList.array);
 
 	// output: true
-  console.log(leoProfanity.check('Bordel de merde'));
+	console.log(leoProfanity.check('Bordel de merde'));
 
 	// output: ****** de *****
-  console.log(leoProfanity.clean('Bordel de merde'));
+	console.log(leoProfanity.clean('Bordel de merde'));
 
 	// output: ****** de *****
-  console.log(leoProfanity.clean('B0rdel de m3rd3'));
+	console.log(leoProfanity.clean('B0rdel de m3rd3'));
 ```
 
 ### with bad-words
@@ -48,9 +50,9 @@ var list = require('french-badwords-list'),
 	var BadWords = require('bad-words');
 	const frenchBadwords = require('french-badwords-list');
 
-  // Only keep french badwords
-  var badwords = new BadWords({ placeHolder: 'x', emptyList: true}); 
-  badwords.addWords(frenchBadwordsList.array);
+	// Only keep french badwords
+	var badwords = new BadWords({ placeHolder: 'x', emptyList: true}); 
+	badwords.addWords(frenchBadwordsList.array);
   
 	// output: xxxxxx de xxxxx
 	badwords.clean('B0rdel de m3rd3'));
