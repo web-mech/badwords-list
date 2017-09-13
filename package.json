@@ -1,6 +1,6 @@
 {
   "name": "french-badwords-list",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Christophe ROGER <darwiinc@live.fr>",
   "license": "MIT",
   "description": "A highly consumable list of french bad (profanity) words (forked from badwords-list)",
