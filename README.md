@@ -1,6 +1,6 @@
 # French Bad Words List (french-badwords-list) v1.0.0 
 
-[![Build Status](https://travis-ci.org/darwiin/french-badwords-list.svg?branch=master)](https://travis-ci.org/darwiin/french-badwords-list) [![Coverage Status](https://coveralls.io/repos/github/darwiin/french-badwords-list/badge.svg?branch=master)](https://coveralls.io/github/darwiin/french-badwords-list?branch=master)
+ [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)[![Build Status](https://travis-ci.org/darwiin/french-badwords-list.svg?branch=master)](https://travis-ci.org/darwiin/french-badwords-list) [![Coverage Status](https://coveralls.io/repos/github/darwiin/french-badwords-list/badge.svg?branch=master)](https://coveralls.io/github/darwiin/french-badwords-list?branch=master)
 
 
 ## Synopsis
@@ -10,6 +10,27 @@ A highly consumable list of bad (profanity) french words based on the list found
 Inspired by [badwords-list](https://github.com/MauriceButler/badwords)
 
 ## Code Example
+
+This bad (profanity) french words list can be used with [bad-words](https://www.npmjs.com/package/bad-words) or [leo-profanity](https://www.npmjs.com/package/leo-profanity) for example. (If you want to add your filter module don't hesitate to create a pull request on the readme).
+
+```
+	// Usage example with leo-profanity
+	const filter = require('leo-profanity');
+	const frenchBadwords = require('french-badwords-list');
+
+	// Only keep french badwords
+	filter.clearList();
+	filter.add(frenchBadwords);
+
+	// output: true
+	filter.check('Bordel de merde');
+
+	// output: ****** de *****
+	filter.clean('Bordel de merde');
+
+	// output: ****** de *****
+	filter.clean('B0rdel de m3rd3');
+```
 
 ```
 var list = require('french-badwords-list'),
@@ -38,6 +59,10 @@ npm install french-badwords-list
 ```
 npm test
 ```
+
+## Release Notes
+- v1.0.0 / Sep 07 2017: Initial publish
+- v1.0.1 / Sep 13 2017: Updated french bad words list
 
 ## License
 
