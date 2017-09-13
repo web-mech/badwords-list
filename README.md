@@ -14,29 +14,45 @@ Inspired by [badwords-list](https://github.com/MauriceButler/badwords)
 This bad (profanity) french words list can be used with [bad-words](https://www.npmjs.com/package/bad-words) or [leo-profanity](https://www.npmjs.com/package/leo-profanity) for example. (If you want to add your filter module don't hesitate to create a pull request on the readme).
 
 ```
-	// Usage example with leo-profanity
-	const filter = require('leo-profanity');
-	const frenchBadwords = require('french-badwords-list');
-
-	// Only keep french badwords
-	filter.clearList();
-	filter.add(frenchBadwords);
-
-	// output: true
-	filter.check('Bordel de merde');
-
-	// output: ****** de *****
-	filter.clean('Bordel de merde');
-
-	// output: ****** de *****
-	filter.clean('B0rdel de m3rd3');
-```
-
-```
 var list = require('french-badwords-list'),
 	array = list.array,
 	object = list.object,
 	regex = list.regex;
+```
+
+### with leo-profanity
+
+```
+	// Usage example with leo-profanity
+	var leoProfanity = require('leo-profanity');
+	var frenchBadwordsList = require('../liste-gros-mots');
+
+	// Only keep french badwords
+	leoProfanity.clearList();
+  leoProfanity.add(frenchBadwordsList.array);
+
+	// output: true
+  console.log(leoProfanity.check('Bordel de merde'));
+
+	// output: ****** de *****
+  console.log(leoProfanity.clean('Bordel de merde'));
+
+	// output: ****** de *****
+  console.log(leoProfanity.clean('B0rdel de m3rd3'));
+```
+
+### with bad-words
+```
+	// Usage example with leo-profanity
+	var BadWords = require('bad-words');
+	const frenchBadwords = require('french-badwords-list');
+
+  // Only keep french badwords
+  var badwords = new BadWords({ placeHolder: 'x', emptyList: true}); 
+  badwords.addWords(frenchBadwordsList.array);
+  
+	// output: xxxxxx de xxxxx
+	badwords.clean('B0rdel de m3rd3'));
 ```
 
 ## Motivation
