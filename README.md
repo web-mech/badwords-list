@@ -42,6 +42,7 @@ var list = require('french-badwords-list'),
 ```
 
 ### with bad-words
+
 ```
 	// Usage example with leo-profanity
 	var BadWords = require('bad-words');
