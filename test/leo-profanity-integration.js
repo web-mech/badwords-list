@@ -1,18 +1,21 @@
-var assert = require('better-assert');
 var filter = require('leo-profanity');
+var should = require('chai').should();
 
-describe('filter', function(){
-  it("should return '****** de *****' for 'bordel de merde' input", function(){
+describe('leo-profanity filter', function () {
+  it("should return '****** de *****' for 'bordel de merde' input", function () {
     var list = require('../lib/index');
     filter.clearList();
     filter.add(list.array);
-    assert(filter.clean('bordel de merde') === '****** de *****');
+
+    filter.clean('bordel de merde').should.be.equal('****** de *****');
   });
 
-  it("should return true for 'bordel de merde' input", function(){
+  it("should return true for 'bordel de merde' input", function () {
     var list = require('../lib/index');
     filter.clearList();
     filter.add(list.array);
-    assert(filter.check('bordel de merde'));
-  });
+
+    filter.check('bordel de merde').should.be.true;
+  })
+
 });

@@ -5,26 +5,28 @@
 
 ## Synopsis
 
-A highly consumable list of bad (profanity) french words based on the list found in [Wiktionary.org](https://fr.wiktionary.org/w/index.php?title=Cat%C3%A9gorie:Insultes_en_fran%C3%A7ais&pageuntil=mongol+a+batteries%0Amongol+%C3%A0+batteries#mw-pages)
-
-[![NPM](https://nodei.co/npm/french-badwords-list.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/french-badwords-list/) [![NPM](https://nodei.co/npm-dl/french-badwords-list.png?height=2)](https://nodei.co/npm/french-badwords-list/)
+A highly consumable list of bad (profanity) french words based on the list found in [Wiktionary.org](https://fr.wiktionary.org/w/index.php?title=Cat%C3%A9gorie:Insultes_en_fran%C3%A7ais&pageuntil=mongol+a+batteries%0Amongol+%C3%A0+batteries#mw-pages) and test with [bad-words](https://www.npmjs.com/package/bad-words) and [leo-profanity](https://www.npmjs.com/package/leo-profanity)
 
 Inspired by [badwords-list](https://github.com/MauriceButler/badwords)
+
+[![NPM](https://nodei.co/npm/french-badwords-list.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/french-badwords-list/)
 
 ## Code Example
 
 This bad (profanity) french words list can be used with [bad-words](https://www.npmjs.com/package/bad-words) or [leo-profanity](https://www.npmjs.com/package/leo-profanity) for example. (If you want to add your filter module don't hesitate to create a pull request on the readme).
 
-```
+```javascript
 var list = require('french-badwords-list'),
 	array = list.array,
 	object = list.object,
 	regex = list.regex;
 ```
 
-### with leo-profanity
+### Code Example with **leo-profanity**
 
-```
+**french-badwords-list** has been succesfully tested with [leo-profanity](https://www.npmjs.com/package/leo-profanity)
+
+```javascript
 	// Usage example with leo-profanity
 	var leoProfanity = require('leo-profanity');
 	var frenchBadwordsList = require('../liste-gros-mots');
@@ -43,9 +45,11 @@ var list = require('french-badwords-list'),
 	console.log(leoProfanity.clean('B0rdel de m3rd3'));
 ```
 
-### with bad-words
+### Code Example with **bad-words**
 
-```
+**french-badwords-list** has been succesfully tested with [bad-words](https://www.npmjs.com/package/bad-words)
+
+```javascript
 	// Usage example with leo-profanity
 	var BadWords = require('bad-words');
 	const frenchBadwords = require('french-badwords-list');
@@ -71,8 +75,10 @@ npm install french-badwords-list
 ## Tests
 
 #### Requires
-- Mocha
-- better-assert
+- [Mocha](https://www.npmjs.com/package/mocha)
+- [Chai](https://www.npmjs.com/package/chai)
+- [leo-profanity](https://www.npmjs.com/package/leo-profanity) for integration testing
+- [bad-words](https://www.npmjs.com/package/bad-words) for integration testing
 
 #### Run
 ```
@@ -82,6 +88,10 @@ npm test
 ## Release Notes
 - v1.0.0 / Sep 07 2017: Initial publish
 - v1.0.1 / Sep 13 2017: Updated french bad words list
+- v1.0.2 / Sep 13 2017: Updated french bad words list
+- v1.0.3 / Sep 18 2017: 
+	- Updated french bad words list
+	- Tests now use chai
 
 ## License
 

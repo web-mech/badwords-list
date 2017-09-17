@@ -1,18 +1,18 @@
-var assert = require('better-assert');
+var should = require('chai').should();
 
 describe('filter', function(){
   it('Should contain property object', function(){
     var list = require('../lib/index');
-    assert(list.hasOwnProperty('object'));
+    list.hasOwnProperty('object').should.be.true;
   });
 
   it('Should contain property array', function(){
     var list = require('../lib/index');
-    assert(list.hasOwnProperty('array'));
+    list.hasOwnProperty('array').should.be.true;
   });
 
   it('Should contain property regex', function(){
     var list = require('../lib/index');
-    assert(list.hasOwnProperty('regex'));
+    list.hasOwnProperty('regex').should.be.true;
   });
 });
