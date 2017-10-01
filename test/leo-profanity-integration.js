@@ -18,4 +18,11 @@ describe('leo-profanity filter', function () {
     filter.check('bordel de merde').should.be.true;
   })
 
+  it("should return true for 'conne' word", function () {
+    var list = require('../lib/index');
+    filter.clearList();
+    filter.add(list.array);
+
+    filter.check('conne').should.be.true;
+  })
 });

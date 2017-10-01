@@ -27,22 +27,22 @@ var list = require('french-badwords-list'),
 **french-badwords-list** has been succesfully tested with [leo-profanity](https://www.npmjs.com/package/leo-profanity)
 
 ```javascript
-	// Usage example with leo-profanity
-	var leoProfanity = require('leo-profanity');
-	var frenchBadwordsList = require('../liste-gros-mots');
+// Usage example with leo-profanity
+var leoProfanity = require('leo-profanity');
+var frenchBadwordsList = require('../liste-gros-mots');
 
-	// Only keep french badwords
-	leoProfanity.clearList();
-	leoProfanity.add(frenchBadwordsList.array);
+// Only keep french badwords
+leoProfanity.clearList();
+leoProfanity.add(frenchBadwordsList.array);
 
-	// output: true
-	console.log(leoProfanity.check('Bordel de merde'));
+// output: true
+console.log(leoProfanity.check('Bordel de merde'));
 
-	// output: ****** de *****
-	console.log(leoProfanity.clean('Bordel de merde'));
+// output: ****** de *****
+console.log(leoProfanity.clean('Bordel de merde'));
 
-	// output: ****** de *****
-	console.log(leoProfanity.clean('B0rdel de m3rd3'));
+// output: ****** de *****
+console.log(leoProfanity.clean('B0rdel de m3rd3'));
 ```
 
 ### Code Example with **bad-words**
@@ -50,16 +50,19 @@ var list = require('french-badwords-list'),
 **french-badwords-list** has been succesfully tested with [bad-words](https://www.npmjs.com/package/bad-words)
 
 ```javascript
-	// Usage example with leo-profanity
-	var BadWords = require('bad-words');
-	const frenchBadwords = require('french-badwords-list');
+// Usage example with leo-profanity
+var BadWords = require('bad-words');
+const frenchBadwords = require('french-badwords-list');
 
-	// Only keep french badwords
-	var badwords = new BadWords({ placeHolder: 'x', emptyList: true}); 
-	badwords.addWords(frenchBadwordsList.array);
+// Only keep french badwords
+var badwords = new BadWords({ placeHolder: 'x', emptyList: true}); 
+badwords.addWords(frenchBadwordsList.array);
   
-	// output: xxxxxx de xxxxx
-	badwords.clean('B0rdel de m3rd3'));
+// output: xxxxxx de xxxxx
+badwords.clean('B0rdel de m3rd3'));
+
+// output: true
+badwords.isProfane('B0rdel de m3rd3'));
 ```
 
 ## Motivation
@@ -92,6 +95,8 @@ npm test
 - v1.0.3 / Sep 18 2017: 
 	- Updated french bad words list
 	- Tests now use chai
+- v1.0.4 / 0ct 02 2017: Add french bad words to the list
+
 
 ## License
 
