@@ -1,14 +1,15 @@
 {
   "name": "french-badwords-list",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Christophe ROGER <darwiinc@live.fr>",
   "license": "MIT",
   "description": "A highly consumable list of french bad (profanity) words (forked from badwords-list)",
-  "main": "./lib/index",
+  "main": "./dist/index",
   "scripts": {
     "test": "./node_modules/.bin/mocha -R nyan",
     "cover": "./node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*",
-    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "build": "uglifyjs ./lib/index.js -m -c -o ./dist/index.js; uglifyjs ./lib/array.js -m -c -o ./dist/array.js; uglifyjs ./lib/object.js -m -c -o ./dist/object.js; uglifyjs ./lib/regexp.js -m -c -o ./dist/regexp.js;"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,8 @@
     "istanbul": "0.4.5",
     "leo-profanity": "^1.2.4",
     "mocha": "^3.5.3",
-    "mocha-lcov-reporter": "1.3.0"
+    "mocha-lcov-reporter": "1.3.0",
+    "uglifyjs": "^2.4.11"
   },
   "bugs": {
     "url": "https://github.com/darwiin/french-badwords-list/issues"

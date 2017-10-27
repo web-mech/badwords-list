@@ -29,7 +29,7 @@ var list = require('french-badwords-list'),
 ```javascript
 // Usage example with leo-profanity
 var leoProfanity = require('leo-profanity');
-var frenchBadwordsList = require('../liste-gros-mots');
+var frenchBadwordsList = require('french-badwords-list');
 
 // Only keep french badwords
 leoProfanity.clearList();
@@ -59,10 +59,10 @@ var badwords = new BadWords({ placeHolder: 'x', emptyList: true});
 badwords.addWords(frenchBadwordsList.array);
   
 // output: xxxxxx de xxxxx
-badwords.clean('B0rdel de m3rd3'));
+console.log(badwords.clean('B0rdel de m3rd3'));
 
 // output: true
-badwords.isProfane('B0rdel de m3rd3'));
+console.log(badwords.isProfane('B0rdel de m3rd3'));
 ```
 
 ## Motivation
@@ -82,6 +82,7 @@ npm install french-badwords-list
 - [Chai](https://www.npmjs.com/package/chai)
 - [leo-profanity](https://www.npmjs.com/package/leo-profanity) for integration testing
 - [bad-words](https://www.npmjs.com/package/bad-words) for integration testing
+- [uglify-js](https://www.npmjs.com/package/uglify-js) to minify source files
 
 #### Run
 ```
@@ -94,9 +95,11 @@ npm test
 - v1.0.2 / Sep 13 2017: Updated french bad words list
 - v1.0.3 / Sep 18 2017: 
 	- Updated french bad words list
-	- Tests now use chai
+	- Tests rewritten with chai
 - v1.0.4 / 0ct 02 2017: Add french bad words to the list
-
+- v1.0.5 / 0ct 27 2017: 
+	- Add new words to the list
+	- Use uglify-js to minify source files
 
 ## License
 

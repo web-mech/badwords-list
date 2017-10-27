@@ -3,7 +3,7 @@ var should = require('chai').should();
 
 describe('leo-profanity filter', function () {
   it("should return '****** de *****' for 'bordel de merde' input", function () {
-    var list = require('../lib/index');
+    var list = require('../dist/index');
     filter.clearList();
     filter.add(list.array);
 
@@ -11,7 +11,7 @@ describe('leo-profanity filter', function () {
   });
 
   it("should return true for 'bordel de merde' input", function () {
-    var list = require('../lib/index');
+    var list = require('../dist/index');
     filter.clearList();
     filter.add(list.array);
 
@@ -19,7 +19,7 @@ describe('leo-profanity filter', function () {
   })
 
   it("should return true for 'conne' word", function () {
-    var list = require('../lib/index');
+    var list = require('../dist/index');
     filter.clearList();
     filter.add(list.array);
 
