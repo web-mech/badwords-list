@@ -33,6 +33,7 @@
   "devDependencies": {
     "bad-words": "1.5.1",
     "chai": "4.1.2",
+    "codecov": "3.0.0",
     "coveralls": "2.13.1",
     "istanbul": "0.4.5",
     "leo-profanity": "1.2.4",
