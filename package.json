@@ -9,6 +9,7 @@
     "test": "./node_modules/.bin/mocha -R nyan",
     "cover": "./node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*",
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "codecov": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && codecov",
     "build": "uglifyjs ./lib/index.js -m -c -o ./dist/index.js; uglifyjs ./lib/array.js -m -c -o ./dist/array.js; uglifyjs ./lib/object.js -m -c -o ./dist/object.js; uglifyjs ./lib/regexp.js -m -c -o ./dist/regexp.js;"
   },
   "repository": {
