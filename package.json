@@ -1,16 +1,16 @@
 {
   "name": "french-badwords-list",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "Christophe ROGER <darwiinc@live.fr>",
   "license": "MIT",
   "description": "A highly consumable list of french bad (profanity) words (forked from badwords-list)",
   "main": "./dist/index",
   "scripts": {
     "test": "./node_modules/.bin/mocha -R nyan",
-    "cover": "./node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*",
-    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "cover": "./node_modules/.bin/nyc ./node_modules/.bin/mocha -- test/*",
+    "coveralls": "./node_modules/.bin/nyc report --reporter=text-lcov | coveralls",
     "codecov": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && codecov",
-    "build": "uglifyjs ./lib/index.js -m -c -o ./dist/index.js; uglifyjs ./lib/array.js -m -c -o ./dist/array.js; uglifyjs ./lib/object.js -m -c -o ./dist/object.js; uglifyjs ./lib/regexp.js -m -c -o ./dist/regexp.js;"
+    "build": "uglifyjs ./lib/array.js -m -c -o ./dist/array.js && uglifyjs ./lib/object.js -m -c -o ./dist/object.js && uglifyjs ./lib/regexp.js -m -c -o ./dist/regexp.js && uglifyjs ./lib/index.js -m -c -o ./dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -31,15 +31,15 @@
     "français"
   ],
   "devDependencies": {
-    "bad-words": "1.5.1",
-    "chai": "4.1.2",
-    "codecov": "3.0.0",
-    "coveralls": "2.13.1",
-    "istanbul": "0.4.5",
-    "leo-profanity": "1.2.4",
-    "mocha": "3.5.3",
+    "bad-words": "3.0.4",
+    "chai": "4.3.6",
+    "codecov": "3.8.3",
+    "coveralls": "3.1.1",
+    "leo-profanity": "1.5.1",
+    "mocha": "10.0.0",
     "mocha-lcov-reporter": "1.3.0",
-    "uglify-js": "3.1.10"
+    "nyc": "15.1.0",
+    "uglify-js": "3.16.3"
   },
   "bugs": {
     "url": "https://github.com/darwiin/french-badwords-list/issues"
