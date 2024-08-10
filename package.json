@@ -1,6 +1,6 @@
 {
   "name": "badwords-list",
-  "version": "1.0.1-0",
+  "version": "1.0.1-1",
   "author": "Michael Price <webmech@gmail.com>",
   "license": "MIT",
   "description": "A highly consumable list of bad (profanity) english words (forked from badwords)",
@@ -16,7 +16,7 @@
     "build": "tsc",
     "prepublishOnly": "tsc",
     "prepare": "husky",
-    "rc": "npm version prerelease && git push --follow-tags && npm publish",
+    "rc": "standard-version --prerelease && git push --follow-tags",
     "release": "standard-version && git push --follow-tags && npm publish"
   },
   "repository": {
