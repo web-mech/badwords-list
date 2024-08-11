@@ -1,3 +1,3 @@
-export * from './array.js'
-export * from './object.js'
-export * from './regexp.js'
+export { array } from './array.js'
+export { object } from './object.js'
+export { regexp } from './regexp.js'
