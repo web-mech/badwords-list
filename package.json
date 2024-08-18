@@ -1,6 +1,6 @@
 {
   "name": "badwords-list",
-  "version": "2.0.1-3",
+  "version": "2.0.1-4",
   "author": "Michael Price <webmech@gmail.com>",
   "license": "MIT",
   "description": "A highly consumable list of bad (profanity) english words (forked from badwords)",
